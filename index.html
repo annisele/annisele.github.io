@@ -1,1 +1,169 @@
-Hello World
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>jennyco</title>
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript">
+
+  $(window).scroll( function() { 
+    if ( $(window).scrollTop() > 0 ) {  
+     loadDiv1(); /* calls loadDiv2 Function below */  
+   }  
+   if ( $(window).scrollTop() > 400 ) { 
+    loadDiv2()
+  } 
+  if ( $(window).scrollTop() > 600 ) { 
+    loadDiv3()
+  } 
+  if ( $(window).scrollTop() > 1200 ) { 
+    loadDiv4()
+    loadDiv5()
+  } 
+
+});  
+  /* the loadDiv2 function */  
+  function loadDiv1() {  
+    $('.about').fadeIn('slow', function() {  
+      $(this).fadeTo("slow", 1);  
+    });  	
+  }
+  function loadDiv2() {  
+    $('.web').fadeIn('slow', function() {  
+      $(this).fadeTo("slow", 1);  
+    });  
+  }
+  function loadDiv3() {  
+    $('.programming').fadeIn('slow', function() {  
+      $(this).fadeTo("slow", 1);  
+    });  	
+  }
+  function loadDiv4() {  
+    $('.design').fadeIn('slow', function() {  
+      $(this).fadeTo("slow", 1);  
+    });   		
+  }
+  function loadDiv5() {   
+    $('.art').fadeIn('slow', function() {  
+      $(this).fadeTo("slow", 1);  
+    });  		
+  }
+  function loadDiv1Out() {  
+    $('.about').fadeOut('slow', function() {  
+      $(this).fadeTo(0, opacity);  
+    });  
+  }  
+
+  </script>
+</head>
+
+<body>
+ <div class="page">
+
+
+  <div class="container">
+
+    <div class = "left">
+
+    </div>
+    <div class = "right">
+
+      jennychen.co
+    </div>
+    <div class="content">
+<!--
+      <div class="header">
+       <div class="head">
+         <a href="#info">
+           <div class="ar">
+             Info
+           </div>
+         </a>
+         <a href="#projects">
+           <div class="ar">
+            Projects
+          </div>
+        </a>
+        <a href="#etc">
+         <div class="ar">
+          Etc
+         </div>
+        </a>
+        <a href="#contact">
+         <div class="ar">
+         Contact
+         </div>
+        </a>
+       </div>
+
+ </div>-->
+
+<div class= "sidebar">
+
+<div class= "side1">
+ <ul class="nav nav-pills red">
+  <li class="active"><a href="#info">Info</a></li>
+</ul>
+</div>
+<div class= "side2">
+ <ul class="nav nav-pills ">
+  <li class="active"><a href="#projects">Projects</a></li>
+</ul>
+</div>
+
+<div class= "side3">
+ <ul class="nav nav-pills ">
+  <li class="active"><a href="#etc">Etc</a></li>
+</ul>
+</div>
+<div class= "side4">
+ <ul class="nav nav-pills ">
+  <li class="active"><a href="#contact">Contact</a></li>
+</ul>
+</div>
+<div class= "side5">
+ <ul class="nav nav-pills ">
+  <li class="active"><a href="#resume">Resume</a></li>
+</ul>
+</div>
+</div>
+
+  <div class="info" id="info">
+<div class = "about" id="about">
+
+      </div>
+
+    <div class = "icon" >
+      <a href="http://www.linkedin.com/in/annisele"><img src="images/linkedin.png" alt="Insert Logo Here" name="Insert_logo" width="50" height="50" ; id="Insert_logo" style=" display:block;" /></a> 
+      <a href="https://twitter.com/fuurbz"><img src="images/twitter.png" alt="Insert Logo Here" name="Insert_logo" width="50" height="50" id="Insert_logo" style=" display:block;" /></a> 
+      <a href="https://github.com/fitzgerlard"><img src="images/github.png" alt="Insert Logo Here" name="Insert_logo" width="50" height="50" id="Insert_logo" style="display:block;" /></a> </div>
+      
+    </div>
+
+    <div class="projects" id="projects">
+      <div class = "web" >
+      </div>
+      <div class = "programming" >
+      </div>
+    </div>
+
+    <div class="etc" id= "etc">
+      <div class = "design" >
+      </div>
+      <div class = "art" >
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="footer">
+
+    <!-- end .footer --></div>
+    <!-- end .container --></div></div>
+     <script src="dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/docs.min.js"></script>
+  </body>
+  </html>
