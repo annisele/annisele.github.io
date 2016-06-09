@@ -1,0 +1,296 @@
+<style type="text/css">
+<!--
+
+html{
+background:black;
+
+}
+
+
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #000;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	
+}
+
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color:#414958;
+	text-decoration: none; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #FFF;
+	text-decoration:underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	
+	color:#FC9;
+	text-emphasis:circle;
+	text-decoration:underline;
+
+}
+.page{
+	background-color:#000;
+}
+/* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
+.container {
+	
+     min-width: 1000px;
+	
+
+	background-color: #000;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
+}
+ .sidebar { 
+        width: 140px;
+        min-height: 100%;
+       float:left;
+       position: fixed;
+       top:0px;
+		background: rgba(0, 0, 0, .7);
+    }
+    .side1 { 
+        width: 100px;
+       float:left;
+       position: fixed;
+       top:60px;
+		height:10px;
+    }
+      .side2 { 
+        width: 100px;
+       float:left;
+       position: fixed;
+       top:100px;
+		height:10px;
+    }
+      .side3 { 
+        width: 100px;
+       float:left;
+       position: fixed;
+       top:140px;
+		height:10px;
+    }
+    .side4 { 
+        width: 100px;
+       float:left;
+       position: fixed;
+       top:180px;
+		height:10px;
+    }
+    .content {
+        float: left;
+		width:70%;
+		
+        min-width: 1280px;
+        background: #000; 
+		z-index:2;       
+    }
+    .right {
+        float: right;
+        width: 20%;
+    
+		right:0;
+bottom:0;
+position:fixed;
+
+color:#FFF;
+font-family: georgia;
+font-size:40px;
+z-index:1;
+
+    }
+
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+
+.header {
+background: rgba(0, 0, 0, .7);
+	
+	width: 100%;
+	height: 45px;
+	position: fixed;
+	top:50px;
+	font-family:time;
+z-index:2;
+text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+.head{
+opacity:1.5;
+margin-left:0px;
+margin-top:0px;
+min-width: 824px;
+
+}
+.ar {
+	
+	
+padding: 5px;
+
+
+}
+
+.filler{
+height: 30px;
+	
+}
+.info {
+	
+	height:780px;
+	background-image: url('images/info.jpg');
+	 background-size: 100% 100%;
+	background-repeat: no-repeat;  
+}
+.projects {
+	height:977px;
+	background-image: url('images/1.jpg');
+	 background-size: 100% 100%;
+	background-repeat: no-repeat; 
+}
+.etc {
+	height:977px;
+	background-image: url('images/4.jpg');
+	 background-size: 100% 100%;
+	background-repeat: no-repeat; 
+}
+.contact{
+	height:667px;
+	background-image: url('images/3.jpg');
+	 background-size:100% 100%;
+	background-repeat: no-repeat; 
+}
+
+
+.icon{
+
+top: 350px;
+right: 400px;
+width: 50px;
+position:relative;
+	 float: right;
+}
+.about{
+	opacity:0;  
+    filter:alpha(opacity=0);  
+	width: 500px;
+	height: 830px;
+	background: rgba(136, 247, 240, .4);
+		 float: left;
+top: 0px;
+left: 220px;
+position:relative;
+}
+.web{
+	opacity:0;  
+    filter:alpha(opacity=0); 
+	width: 650px;
+	height: 400px;
+	background: rgba(255,162,117, .35);
+	
+top: 50px;
+left: 720px;
+position:relative;
+}
+.programming{
+		opacity:0;  
+    filter:alpha(opacity=0); 
+	width: 1000px;
+	height: 500px;
+	background: rgba(150,0,150, .2);
+
+
+left: 140px;
+position:relative;
+}
+.design{
+		opacity:0;  
+    filter:alpha(opacity=0);   
+	width: 500px;
+	height: 800px;
+	background: rgba(170, 210, 250, .42);
+	
+	float: left;
+top: 50px;
+left: 140px;
+position:relative;
+}
+.art{
+	opacity:0;  
+    filter:alpha(opacity=0);  
+	 float: right;
+	width: 445px;
+	height: 580px;
+	background: rgba(0, 63, 125, .3);
+	
+top: 50px;
+right: 90px;
+position:relative;
+}
+
+
+
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+
+
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	text-decoration: none;
+	background-color: #8090AB;
+	color: #000;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	background-color: #6F7D94;
+	color: #FFF;
+}
+
+/* ~~The footer ~~ */
+.footer {
+	padding: 20px 0;
+	opacity:1;
+	background-image: url('images/3.jpg');
+ background-size: 100% 400%;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+}
+
+/* ~~miscellaneous float/clear classes~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+
+</style><!--[if lte IE 7]>
