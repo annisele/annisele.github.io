@@ -1,169 +1,739 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html class="no-skrollr">
 <head>
-  <title>jennyco</title>
-  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <script type="text/javascript" src="jquery.js"></script>
-  <script type="text/javascript">
+    <meta charset="utf-8">
 
-  $(window).scroll( function() { 
-    if ( $(window).scrollTop() > 0 ) {  
-     loadDiv1(); /* calls loadDiv2 Function below */  
-   }  
-   if ( $(window).scrollTop() > 400 ) { 
-    loadDiv2()
-  } 
-  if ( $(window).scrollTop() > 600 ) { 
-    loadDiv3()
-  } 
-  if ( $(window).scrollTop() > 1200 ) { 
-    loadDiv4()
-    loadDiv5()
-  } 
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+    
+    <link href='http://fonts.googleapis.com/css?family=Anonymous+Pro' rel='stylesheet' type='text/css'>
+     <link href='http://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
+    
 
-});  
-  /* the loadDiv2 function */  
-  function loadDiv1() {  
-    $('.about').fadeIn('slow', function() {  
-      $(this).fadeTo("slow", 1);  
-    });  	
-  }
-  function loadDiv2() {  
-    $('.web').fadeIn('slow', function() {  
-      $(this).fadeTo("slow", 1);  
-    });  
-  }
-  function loadDiv3() {  
-    $('.programming').fadeIn('slow', function() {  
-      $(this).fadeTo("slow", 1);  
-    });  	
-  }
-  function loadDiv4() {  
-    $('.design').fadeIn('slow', function() {  
-      $(this).fadeTo("slow", 1);  
-    });   		
-  }
-  function loadDiv5() {   
-    $('.art').fadeIn('slow', function() {  
-      $(this).fadeTo("slow", 1);  
-    });  		
-  }
-  function loadDiv1Out() {  
-    $('.about').fadeOut('slow', function() {  
-      $(this).fadeTo(0, opacity);  
-    });  
-  }  
 
-  </script>
+    <title>Jennyc.co</title>
+    <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+
+    <style type="text/css">
+        .back-link a {
+            color: #4ca340;
+            text-decoration: none; 
+            border-bottom: 1px #4ca340 solid;
+        }
+        .back-link a:hover,
+        .back-link a:focus {
+            color: #408536; 
+            text-decoration: none;
+            border-bottom: 1px #408536 solid;
+        }
+        h1 {
+            height: 100%;
+            /* The html and body elements cannot have any padding or margin. */
+            margin: 0;
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+            color: #1c1d1e;
+            font-size: 32px;
+            margin-bottom: 3px;
+        }
+        h2 {
+            color: #1c1d1e;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: normal;
+        }
+        .entry-header .inner {
+            text-align: left;
+            margin: 0 auto 20px auto;
+            width: 800px;
+        }
+        .entry-header { padding-top: 20px; background-color: #fff; width:100%; position: fixed; top: 0; left: 0; z-index: 999999}
+    </style>
+
+
+    
 </head>
 
-<body>
- <div class="page">
+<body class="loading">
+
+ <script type="text/javascript">
+    var someVar = "JennyTest";
+    var currentdate = new Date(); 
+
+    var greeting = " "
+    var hours = currentdate.getHours();
+if (hours < 12&&hours >= 0) {
+    greeting = "Good Morning!"
+}
+else if (hours >= 12&&hours < 18) {
+    hours -= 12;
+    greeting = "Good Afternoon!"
+}
+else if (hours >= 18&&hours < 24) {
+    hours -= 12;
+    greeting = "Good Evening!"
+}
+ else if (hours === 0) {
+   hours = 12;
+}
+
+var datetime = greeting + currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + " @ "  
+                + hours + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+    console.log("JennyTest");
+    console.log(hours);
+ </script>
+     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
 
-  <div class="container">
 
-    <div class = "left">
 
-    </div>
-    <div class = "right">
 
-      jennychen.co
-    </div>
-    <div class="content">
-<!--
-      <div class="header">
-       <div class="head">
-         <a href="#info">
-           <div class="ar">
-             Info
-           </div>
-         </a>
-         <a href="#projects">
-           <div class="ar">
-            Projects
-          </div>
-        </a>
-        <a href="#etc">
-         <div class="ar">
-          Etc
-         </div>
-        </a>
-        <a href="#contact">
-         <div class="ar">
-         Contact
-         </div>
-        </a>
-       </div>
+     
 
- </div>-->
-
-<div class= "sidebar">
-
-<div class= "side1">
- <ul class="nav nav-pills red">
-  <li class="active"><a href="#info">Info</a></li>
-</ul>
-</div>
-<div class= "side2">
- <ul class="nav nav-pills ">
-  <li class="active"><a href="#projects">Projects</a></li>
-</ul>
-</div>
-
-<div class= "side3">
- <ul class="nav nav-pills ">
-  <li class="active"><a href="#etc">Etc</a></li>
-</ul>
-</div>
-<div class= "side4">
- <ul class="nav nav-pills ">
-  <li class="active"><a href="#contact">Contact</a></li>
-</ul>
-</div>
-<div class= "side5">
- <ul class="nav nav-pills ">
-  <li class="active"><a href="#resume">Resume</a></li>
-</ul>
-</div>
-</div>
-
-  <div class="info" id="info">
-<div class = "about" id="about">
-
-      </div>
-
-    <div class = "icon" >
-      <a href="http://www.linkedin.com/in/annisele"><img src="images/linkedin.png" alt="Insert Logo Here" name="Insert_logo" width="50" height="50" ; id="Insert_logo" style=" display:block;" /></a> 
-      <a href="https://twitter.com/fuurbz"><img src="images/twitter.png" alt="Insert Logo Here" name="Insert_logo" width="50" height="50" id="Insert_logo" style=" display:block;" /></a> 
-      <a href="https://github.com/fitzgerlard"><img src="images/github.png" alt="Insert Logo Here" name="Insert_logo" width="50" height="50" id="Insert_logo" style="display:block;" /></a> </div>
+<nav class="navbar navbar-default navbar-static-top" style="z-index: 100;">
+  <div class="container-fluid">
+  
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
       
-    </div>
-
-    <div class="projects" id="projects">
-      <div class = "web" >
-      </div>
-      <div class = "programming" >
-      </div>
-    </div>
-
-    <div class="etc" id= "etc">
-      <div class = "design" >
-      </div>
-      <div class = "art" >
-      </div>
+    </div>   
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li ><a href="#">HOME <span class="sr-only">(current)</span></a></li>
+        <li><a href="projects.html">PROJECTS</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">MENU <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#slide-2">About</a></li>
+            <li><a href="#slide-3">Programming Skills</a></li>
+            <li><a href="#slide-6">Currently Working On</a></li>
+            <li><a href="#slide-8">Bookshelf</a></li>
+            <li><a href="#slide-9">Portfolio</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+       
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">CONTACT<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="http://www.linkedin.com/in/annisele">LinkedIn</a></li>
+            <li><a href="https://github.com/annisele">Github</a></li>
+            <li><a href="https://twitter.com/fuurbz">Twitter</a></li>
+            <li class="divider"></li>
+            <li><a href="mailto:yiwen@usc.edu">Email</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </div>
+</nav>
+ 
 
 
 
-  <div class="footer">
+<div class="MenuStuff">
 
-    <!-- end .footer --></div>
-    <!-- end .container --></div></div>
-     <script src="dist/js/bootstrap.min.js"></script>
-    <script src="assets/js/docs.min.js"></script>
-  </body>
-  </html>
+      <input type="checkbox" id="ShowMenu" >
+
+      <div id="hi"
+
+<nav class="navbar navbar-default navbar-static-top" style="z-index: 100;">
+  <div class="container-fluid">
+  
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>   
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li ><a href="#">HOME <span class="sr-only">(current)</span></a></li>
+        <li><a href="projects.html">PROJECTS</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">MENU <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#slide-2">About</a></li>
+            <li><a href="#slide-3">Programming Skills</a></li>
+            <li><a href="#slide-6">Currently Working On</a></li>
+            <li><a href="#slide-8">Bookshelf</a></li>
+            <li><a href="#slide-9">Portfolio</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+
+
+      <ul class="nav navbar-nav navbar-right">
+       
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">CONTACT<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="http://www.linkedin.com/in/annisele">LinkedIn</a></li>
+            <li><a href="https://github.com/annisele">Github</a></li>
+            <li><a href="https://twitter.com/fuurbz">Twitter</a></li>
+            <li class="divider"></li>
+            <li><a href="mailto:yiwen@usc.edu">Email</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ 
+      <!--
+        <h3>Menu</h3>
+         <ul class="Ask ">
+          
+            <li><a href="/ask">Ask</a></li>
+          
+          
+        </ul>
+        
+          <ul class="Pages">
+            <li><a href="/casual-hex">home</a></li><li><a href="/every-house">about</a></li><li><a href="/dad-hipsters">look here</a></li><li><a href="/little-dragon">projects</a></li><li><a href="/shit-and-die">contact</a></li><li><a href="/swiss-timber">hi</a></li>
+          </ul>
+      -->
+        
+
+
+      </div>
+      <label for="ShowMenu">
+
+<span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>   
+</label>
+    </div>
+ 
+
+
+    <main>
+    <section id="slide-1" class="homeSlide">
+        <div 
+            class="bcg" 
+            
+            data-bottom-top="transform:translate3d(0px, 190%, 0px)"
+            data-top-bottom="transform:translate3d(0px, 0%, 0px)"
+            
+            data-anchor-target="#slide-1">
+            <div 
+                class="hsContainer"
+                
+                data-anchor-target="#slide-1"
+                    data-bottom-top="transform: translate3d(0px, -10%, 0px);"
+                    data-top-bottom="transform: translate3d(0px, 10%, 0px);">
+
+                <div 
+                    class="hsContent" 
+                    style="background-image:url(https://unsplash.it/1242/900/?image=606)"
+                    data-anchor-target="#slide-1"
+                    data-bottom-top="transform: translate3d(0px, -5%, 0px);"
+                    data-top-bottom="transform: translate3d(0px, 5%, 0px);"
+                
+
+                    
+                    >
+          
+                                                
+
+                <h2 style="font-size:7em; color:#fff; font-weight: bold;line-height: 82px;-webkit-text-stroke: 1px #999;padding-bottom: 20%">
+                    <script type="text/javascript">
+                     document.write(greeting); 
+                    
+                 </script> </h2>
+
+                  <p style="font-family:Orator;font-size:20px;font-weight: bold; padding-right:17%; padding-bottom: 6%">scroll DOWN to view site</br> or click <a href="projects.html" style ="text-decoration: underline;">HERE</a> to view work.</p>
+              
+
+                  
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="slide-2" class="homeSlide">
+    <div 
+        class="bcg" 
+        
+        data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+        data-top-bottom="transform:translate3d(0px, 0%, 0px)"
+        
+        data-anchor-target="#slide-2">
+        <div 
+            class="hsContainer" >
+
+            <div 
+                class="hsContent" 
+    
+                data-anchor-target="#slide-2"
+                data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+                data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+                style="background-image:url(https://unsplash.it/1242/900/?image=465)"
+                >
+                <div data-anchor-target="#slide-2"
+                data-bottom-top="transform: translate3d(0px, 100%, 0px);"
+                data-top-bottom="transform: translate3d(0px, -120%, 0px);"
+                
+                >
+                
+                <h3 style=" color:#FF4E50; font-size:3em;"><img src="images/jchen.png" width="200px" height="200px">  Hi there.</h3>
+                <p style="font-family:Source Sans Pro"> </br>My name is Jenny Chen and thanks for browsing my site! I'm a programmer/developer and hope to get my hand dirty as a software engineer, data wrangler and full-stack creative technologist. </br></br>These days, I'm busy doing differential problem sets, anyalzing russian lit and optimizing performance of interconnection networks while I pursue a B.S. in Computer Science and Physics at USC.</br></p>
+            
+            </div>
+        </div>
+        
+        
+        </div>
+    </div>
+</section>
+<section id="slide-3" class="homeSlide">
+    <div 
+        class="bcg" 
+        
+        data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+        data-top-bottom="transform:translate3d(0px, 0%, 0px)"
+        
+        data-anchor-target="#slide-3">
+        <div 
+            class="hsContainer"
+           >
+
+            <div 
+                class="hsContent" 
+                style="background-image:url(https://unsplash.it/1242/900/?image=559)"
+                data-anchor-target="#slide-3"
+                data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+                data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+               >
+                
+
+                <h2 style=" color:#ED4912;">
+                    <div class="row">
+  <div class="col-xs-6" style ="text-align:right; left:5%">   C++ </br>Java </br>Python </br>
+                    
+                    Scala </br>
+                    Obj-C </br>
+                    Javascript </br>
+                    HTML/CSS </br>
+                    PHP </br>
+                    Assembly </br></div>
+
+
+
+  <div class="col-xs-6" style ="text-align:left; font-size:28px; left:5%"> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></br>  <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></br> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></br>
+                    
+                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> </br>
+                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></br>
+                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></br>
+                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></br>
+                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></br>
+                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></div>
+</div>
+                  
+
+
+
+                </h2>
+                <p style="font-family:Orator;"></br>Some of my favorite languages and my level of proficiency.</p>
+           
+            </div>
+        </div>
+    </div>
+</section>
+<section id="slide-4" class="homeSlideShort">
+    <div 
+        class="bcg" 
+        
+        data-bottom-top="transform:translate3d(0px, 300%, 0px)"
+        data-top-bottom="transform:translate3d(0px, 0%, 0px)"
+        
+        data-anchor-target="#slide-4">
+        <div 
+            class="hsContainer" id ="c4">
+
+            <div 
+                class="hsContent" id="c44" 
+    
+                data-anchor-target="#slide-4"
+                style="background-image:url(https://unsplash.it/1242/900/?image=79)"
+                data-bottom-top="transform: translate3d(0px, -60%, 0px);"
+                data-top-bottom="transform: translate3d(0px, 60%, 0px);">
+                <div data-anchor-target="#slide-4"
+                data-bottom-top="transform: translate3d(0px, 280%, 0px);"
+                data-top-bottom="transform: translate3d(0px, -280%, 0px);"
+                
+                >
+                
+                 
+                <div class="banner-centered" id="banner">
+
+                <h4 style=" color:#fff; font-size: 2.5em;"> As well as...<button type="button" class="btn btn-primary" disabled="disabled">MySQL</button><button type="button" class="btn btn-primary" disabled="disabled">SHELL SCRIPTING</button><button type="button" class="btn btn-primary" disabled="disabled">UNIX</button><button type="button" class="btn btn-primary" disabled="disabled">GIT</button><button type="button" class="btn btn-primary" disabled="disabled">ECLIPSE</button><button type="button" class="btn btn-primary" disabled="disabled">JQUERY</button><button type="button" class="btn btn-primary" disabled="disabled">VISUAL STUDIOS</button><button type="button" class="btn btn-primary" disabled="disabled">BOOTSTRAP</button><button type="button" class="btn btn-primary" disabled="disabled">ILLUSTRATOR</button><button type="button" class="btn btn-primary" disabled="disabled">AUTOCAD</button><button type="button" class="btn btn-primary" disabled="disabled">SPLUNK</button><button type="button" class="btn btn-primary" disabled="disabled">MAYA</button><button type="button" class="btn btn-primary" disabled="disabled">UNITY</button></h4>
+            </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="slide-5" class="homeSlideShort">
+    <div 
+        class="bcg" 
+        
+        data-bottom-top="transform:translate3d(0px, 300%, 0px)"
+        data-top-bottom="transform:translate3d(0px, 0%, 0px)"
+        
+        data-anchor-target="#slide-5">
+        <div 
+            class="hsContainer">
+
+            <div 
+                class="hsContent" 
+                style="background-image:url(https://unsplash.it/1242/900/?image=614)"
+                data-anchor-target="#slide-5"
+                data-bottom-top="transform: translate3d(0px, -60%, 0px);"
+                data-top-bottom="transform: translate3d(0px, 60%, 0px);">
+                <div data-anchor-target="#slide-5"
+                data-bottom-top="transform: translate3d(0px, 600%, 0px);"
+                data-top-bottom="transform: translate3d(0px, -600%, 0px);">
+                <div class="banner-centered" id="banner-text5">
+                <h4 style="font-size: 3em;  font-style: italic; color:#F2041C;">I'm a creative at heart and nothing gets me :-)in' <b>like a superb design.</b></h4>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="slide-6" class="homeSlide">
+    <div 
+        class="bcg" 
+        
+        data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+        data-top-bottom="transform:translate3d(0px, 0%, 0px)"
+        
+        data-anchor-target="#slide-6">
+        <div 
+            class="hsContainer"
+           >
+
+            <div 
+                class="hsContent" 
+    
+                data-anchor-target="#slide-6"
+                data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+                data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+                style="background-image:url(https://unsplash.it/1242/900/?image=299)">
+                <div data-anchor-target="#slide-5"
+                data-bottom-top="transform: translate3d(0px, -180%, 0px);"
+                data-top-bottom="transform: translate3d(0px, 0%, 0px);"
+                >
+
+                <h2 style="font-size: 4.5em; line-height: 58px;color:#FFD119;"></br>Projects I'm currently working on.</h2></br></br>
+
+                <div class=" col-xs-6 col-md-4" style= "background-color: rgba(0,0,0,0.6);margin-left:-10px">
+          
+          <a href="#" class="thumbnail">
+          <img src="images/suguardian.png" alt="...">
+      </a>
+          <p style = "color:#fff; font-size:1.3;font-family:Source Sans Pro">The SuGuardian is a wearable continuous glucose-monitoring device that uses tissue topography to read glucose levels. Currently in process of receiving patents. ​Thesuguardian.com </p>
+          
+        </div>
+         <div class="col-xs-6 col-md-4"style= "background-color: rgba(0,0,0,0.6); margin-left:10px">
+          
+          <a href="#" class="thumbnail">
+          <img src="images/goodreads.png" alt="...">
+      </a>
+          <p style = "color:#fff; font-size:1.3;font-family:Source Sans Pro">Bookends is an app I'm writing to further learn jQuery and using APIs. It connects to your goodread account to populate a virtual bookself that is easy to share.</p>
+          
+        </div>
+        <div class="col-md-2">
+          
+          <p>  </p>
+          <p><a class="btn btn-default" href="projects.html" role="button" style=" font-family: 'Orator';color:#000">MORE PROJECTS »</a></p>
+        </div>
+               
+      
+        </div>
+    </div>
+</section>
+
+
+<section id="slide-8" class="homeSlide75">
+    <div 
+        class="bcg" 
+        
+        data-bottom-top="transform:translate3d(0px, 225%, 0px)"
+        data-top-bottom="transform:translate3d(0px, 0%, 0px)"
+        
+        data-anchor-target="#slide-8">
+        <div 
+            class="hsContainer">
+            <div 
+                class="hsContent" 
+    
+                data-anchor-target="#slide-8"
+                data-bottom-top="transform: translate3d(0px, -40%, 0px);"
+                data-top-bottom="transform: translate3d(0px, 40%, 0px);"
+                style="background-image:url(https://unsplash.it/1242/900/?image=192)"
+                >
+                <div data-anchor-target="#slide-8"
+                data-bottom-top="transform: translate3d(0px, 40%, 0px);"
+                data-top-bottom="transform: translate3d(0px, -80%, 0px);"
+            
+                >
+                <h4 style="font-size=5em; line-height: 52px; color:#A3A948;">
+                My Reading Shelf:</h4>
+                
+                <div>
+                </br>
+                <a href="images/books.png">
+                <img src="images/books.png" width="50%" height="70%"></a>
+                <a href="images/books2.png">
+                <img src="images/books2.png" width="50%" height="70%"></a>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="slide-9" class="homeSlide">
+    <div 
+        class="bcg" 
+        
+        data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+        data-top-bottom="transform:translate3d(0px, 0%, 0px)"
+        
+        data-anchor-target="#slide-9">
+        <div 
+            class="hsContainer">
+            <div 
+                class="hsContent" 
+    
+                data-anchor-target="#slide-9"
+                data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+                data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+                style="background-image:url(https://unsplash.it/1242/900/?image=369)"
+                >
+                <div data-anchor-target="#slide-9"
+                data-bottom-top="transform: translate3d(0px,-180%, 0px);"
+                data-top-bottom="transform: translate3d(0px, 120%, 0px);"
+                top= 0
+                
+                >
+                <h2 style= "color: #FC3548;">
+                I'm working on developing my technical abilities:</br></h2>
+                <p style= "color: #000; font-weight: bold;font-style: italic;"></br> <span style="background-color: #FFFF00">"'Kaizen' is a Japanese term that captures the concept of continuously making many small improvements.” </br>
+― Andrew Hunt, The Pragmatic Programmer</br></br> "How much better is a great programmer than an ordinary one? So much better that you can't even measure the difference directly." </br>- Paul Graham, co-founded Y-Combinator</span> </br></br></p>
+                    <a href="projects.html#school"><button type="button" class="btn btn-default">CS Foundations »</button></a>
+                    <a href="projects.html#work">
+                    <button type="button" class="btn btn-default" >Scripting »</button><a>
+                    <a href="projects.html#personal">
+                    <button type="button" class="btn btn-default" >Web Development »</button></a>
+
+                
+            </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section id="slide-10" class="homeSlideShort">
+    <div 
+        class="bcg" 
+        
+        data-bottom-top="transform:translate3d(0px, 300%, 0px)"
+        data-top-bottom="transform:translate3d(0px, 0%, 0px)"
+        
+        data-anchor-target="#slide-10">
+        <div 
+            class="hsContainer">
+            <div 
+                class="hsContent" 
+                
+                data-anchor-target="#slide-10"
+                style="background-image:url(https://unsplash.it/1242/900/?image=54)"
+                data-bottom-top="transform: translate3d(0px, -40%, 0px);"
+                data-top-bottom="transform: translate3d(0px, 5%, 0px);"
+                >
+                <div data-anchor-target="#slide-10"
+                data-bottom-top="transform: translate3d(0px,-110%, 0px);"
+                data-top-bottom="transform: translate3d(0px, 240%, 0px);"
+                
+                >
+                <h4 style= "color: #FFD119;">I'm working on developing my design sensibilities:</h4>
+                <p style= "color: #fff; font-weight: bold;font-style: italic;"></br> <span style="background-color: #111">"For you to sleep well at night, the aesthetic, the quality, has to be carried all the way through." - Steve Jobs</br></br></span></p>
+                    <a href="projects.html#uiux">
+                    <button type="button" class="btn btn-default">UI/UX »</button></a>
+                    <a href="projects.html#workflow">
+                    <button type="button" class="btn btn-default">Workflow Design »</button></a>
+                    
+
+                
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+ <section id="slide-11" class="homeSlide">
+    <div 
+        class="bcg" 
+        
+        data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+        data-top-bottom="transform:translate3d(0px, 0%, 0px)"
+        
+        data-anchor-target="#slide-11">
+        <div 
+            class="hsContainer">
+            <div
+                class="hsContent" 
+    
+                data-anchor-target="#slide-11"
+                data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+                data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+                style="background-image:url(https://unsplash.it/1242/900/?image=536)"
+                >
+                <div data-anchor-target="#slide-11"
+                data-bottom-top="transform: translate3d(0px,-60%, 0px);"
+                data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+                
+                >
+                <div class="banner-centered" id="banner-text11">
+                <h3 style= "color: #ED4912;">I'm working on broading my horizon:
+
+                </h3>
+                </br></br>
+                <p style= "color: #fff;font-style: italic;">
+                    "You might not think that programmers are artists, but programming is an extremely creative profession. It's logic-based creativity."</br> - John Romero, game designer/programmer</br></br>
+
+                    "What hackers and painters have in common is that they're both makers. . . hackers, like painters, must have empathy to do really great work. You have to be able to see things from the user's point of view." </br>- Paul Graham</br></p></br></br>
+                    <a href="http://www.bluecanvas.com/annisele">
+                    <button type="button" class="btn btn-default">Fine Art »</button></a>
+                    
+                    <a href="https://vimeo.com/annisele">
+                    <button type="button" class="btn btn-default">Film Production »</button></a>
+                    <a href="https://medium.com/@fuurbz">
+                    <button type="button" class="btn btn-default">Blog »</button></a>
+                    <a href="https://www.goodreads.com/user/show/36953901"><button type="button" class="btn btn-default">Booklist »</button></a></br></br>
+ 
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+ <section id="slide-12" class="homeSlideShort">
+    <div 
+        class="bcg" 
+        
+        data-bottom-top="transform:translate3d(0px, 300%, 0px)"
+        data-top-bottom="transform:translate3d(0px, 0%, 0px)"
+        
+        data-anchor-target="#slide-12">
+        <div 
+            class="hsContainer">
+            <div 
+                class="hsContent" 
+    
+                data-anchor-target="#slide-12"
+                style="background-image:url(https://unsplash.it/1242/900/?image=406)"
+                data-bottom-top="transform: translate3d(0px, -60%, 0px);"
+                data-top-bottom="transform: translate3d(0px, 60%, 0px);">
+                <div data-anchor-target="#slide-12"
+                data-bottom-top="transform: translate3d(-100px, 0%, 0px);"
+                data-top-bottom="transform: translate3d(40px, 0%, 500px);"
+                
+                >
+                <h4 style="font-size: 3em;font-family: NeoSans;font-style: italic; color:#009989;line-height: 34px;">Want to see some code?<a href="https://github.com/annisele" style= "text-decoration: underline; font-size: .7em;color:#fff; text-align: left"></br>Check out my Github.</a></br> </br>Want to talk to me directly? </br><a href="mailto:yiwen@usc.edu" style= "text-decoration: underline; font-size: .7em;color:#fff">Email me.</a></h4>
+               
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+ <section id="slide-13" class="homeSlideShort">
+    <div 
+        class="bcg" 
+        
+        data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+        data-top-bottom="transform:translate3d(0px, 0%, 0px)"
+        
+        data-anchor-target="#slide-13">
+        <div 
+            class="hsContainer">
+            <div 
+                class="hsContent" 
+    
+                data-anchor-target="#slide-13"
+                data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+                data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+                style="background-image:url(https://unsplash.it/1242/900/?image=283)"
+                >
+                
+                
+                <h3 style=" font-size: 4em; color:#FF4E50;"></br></br></br>
+
+:) </br></br>
+    <a href="http://www.linkedin.com/in/annisele">
+        <img src="images/linkedin.png" alt="Insert Logo Here" name="Insert_logo" width="50" height="50" ; padding= "10px";id="Insert_logo">
+    </a> 
+      <a href="https://github.com/annisele">
+        <img src="images/github.png" alt="Insert Logo Here" name="Insert_logo" width="50" height="50" id="Insert_logo"  padding= "10px">
+    </a>
+    <a href="https://twitter.com/fuurbz">
+        <img src="images/twitter.png" alt="Insert Logo Here" name="Insert_logo" width="50" height="50" id="Insert_logo" padding= "10px">
+    </a> 
+     
+    <a href="https://angel.co/fuurbz">
+        <img src="images/angellist.png" alt="Insert Logo Here" name="Insert_logo" width="50" height="50" id="Insert_logo"  padding= "10px">
+    </a> 
+
+                </h3>
+                <p style="font-family: Raleway;"> </br></br></br>©Jenny Chen </br> Photographs from <a href="https://unsplash.it/" style="color:#000; text-decoration:underline">Unplash.it </a></p>
+
+         
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    </main>
+    
+   
+
+    
+        
+
+    <script type="text/javascript" src="dist/skrollr.min.js"></script>
+   
+ 
+    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/imagesloaded.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="js/_main.js"></script>
+
+    
+</body>
+
+
+</html>
+
+
